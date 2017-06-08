@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quantized Complex Crypto</title>
-    <link>http://quantcc.fangsong.info/</link>
+    <link>http://qcc.fangsong.info/</link>
     <description>Recent content on Quantized Complex Crypto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://quantcc.fangsong.info/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://qcc.fangsong.info/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Quantum-secure Pseudorandom Permutations</title>
-      <link>http://quantcc.fangsong.info/post/qprf/</link>
+      <link>http://qcc.fangsong.info/post/qprf/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://quantcc.fangsong.info/post/qprf/</guid>
+      <guid>http://qcc.fangsong.info/post/qprf/</guid>
       <description> What is a PRP \(a^b = c\) can be written like this. $$ \Pr[a = b] $$
 subheading </description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://quantcc.fangsong.info/about/</link>
+      <link>http://qcc.fangsong.info/about/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://quantcc.fangsong.info/about/</guid>
+      <guid>http://qcc.fangsong.info/about/</guid>
       <description>Quantized Complex Crypto was a blog name that Fang Song came up with not long after he started his PhD journey. He scribbled a word or two then, but they didn&amp;rsquo;t go anywhere, unfortunately. A few years later, he decided to give it a second chance. Don&amp;rsquo;t be disappointed should it not go far, again!
 Fang Song is a theoretical computer scientist, working on exciting subjects that some day people will truly care.</description>
     </item>

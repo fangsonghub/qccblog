@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Quantized Complex Crypto</title>
-    <link>http://quantcc.fangsong.info/tags/</link>
+    <link>http://qcc.fangsong.info/tags/</link>
     <description>Recent content in Tags on Quantized Complex Crypto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://quantcc.fangsong.info/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://qcc.fangsong.info/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Feistel</title>
-      <link>http://quantcc.fangsong.info/tags/feistel/</link>
+      <link>http://qcc.fangsong.info/tags/feistel/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://quantcc.fangsong.info/tags/feistel/</guid>
+      <guid>http://qcc.fangsong.info/tags/feistel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Psedurandom</title>
-      <link>http://quantcc.fangsong.info/tags/psedurandom/</link>
+      <link>http://qcc.fangsong.info/tags/psedurandom/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://quantcc.fangsong.info/tags/psedurandom/</guid>
+      <guid>http://qcc.fangsong.info/tags/psedurandom/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quantum Security</title>
-      <link>http://quantcc.fangsong.info/tags/quantum-security/</link>
+      <link>http://qcc.fangsong.info/tags/quantum-security/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://quantcc.fangsong.info/tags/quantum-security/</guid>
+      <guid>http://qcc.fangsong.info/tags/quantum-security/</guid>
       <description></description>
     </item>
     
