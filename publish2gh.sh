@@ -27,5 +27,5 @@ hugo
 
 
 echo "Updating gh-pages branch"
-cd public && echo qcc.fangsong.info >> CNAME && git add --all && git commit -m "Publishing to gh-pages (publish.sh)" && cd ..
+cd public && echo "qcc.fangsong.info" >> CNAME && git add --all && git commit -m "Publishing to gh-pages (publish.sh)" && cd ..
 
