@@ -1,0 +1,18 @@
+<header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+            <nav id="main-nav">
+                {{ range .Site.Menus.main }}
+                <a class="main-nav-link hvr-grow" href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a>
+                {{ end }}
+		<a class ="main-nav-link" href="{{ .Site.RSSLink }}" type="application/rss+xml" target="_blank" title="RSS"><i class="fa fa-rss fa-fw"></i>RSS</a>
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>

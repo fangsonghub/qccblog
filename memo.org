@@ -1,0 +1,19 @@
+** what i want
+
+- ! index: title 
+- ! index: summary only posts; read more style; how:pagiate. where...
+- ! post: title center
+- ! about: remove title/time layout
+- !font-family: web-friendly
+- host on github
+- !learn RSS;
+- !squeeze title space from header
+- ! favicon: generated, not showing up
+- !reading time; metadata center in post;
+*** future
+- link: header hover remove underline; footer: social icons style; http://ianlunn.github.io/Hover/
+- archive: year, category
+- menu float right, but left on small screen;
+- hyperlink colors
+- search
+

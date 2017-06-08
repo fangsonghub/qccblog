@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>{{ .Title }}{{ if ne .Title .Site.Title }} // {{ .Site.Title }}{{ end }}</title>
+
+	{{ partial "meta.html" . }}
+	{{ partial "og.html" . }}
+
+	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	<!-- <link rel="shortcut icon" href="/favicon.png"> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Raleway|Oswald|Lato">
+	
+	 <link href="{{ .Site.BaseURL }}webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+	 <link href="{{ .Site.BaseURL }}webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+
+	<link href="http://gmpg.org/xfn/11" rel="profile">
+	
+	{{ .Hugo.Generator }}
+
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	{{ with .Site.Params.highlightjs }}
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/{{ . }}.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	{{ end }}
+	<!-- favicon -->
+	{{ partial "favicon.html" . }}
+
+    </head>
