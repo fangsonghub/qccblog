@@ -13,10 +13,10 @@
     
     <item>
       <title>Quantum-secure Pseudorandom Permutations</title>
-      <link>http://qcc.fangsong.info/post/qprf/</link>
+      <link>http://qcc.fangsong.info/2017-06-quantumprp/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://qcc.fangsong.info/post/qprf/</guid>
+      <guid>http://qcc.fangsong.info/2017-06-quantumprp/</guid>
       <description> What is a PRP \(a^b = c\) can be written like this. $$ \Pr[a = b] $$
 subheading </description>
     </item>
