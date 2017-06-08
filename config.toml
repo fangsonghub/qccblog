@@ -7,6 +7,9 @@ author = "Fang Song"
 # canonifyurls = true
 paginate = 5
 
+[permalinks]
+  post= "/:year-:month-:slug/"
+
 [params]
     subtitle = "Entangled Thoughts on Quantum Computing, Cryptography, and TCS broadly!"
     smartToc = "false"

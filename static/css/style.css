@@ -323,6 +323,7 @@ a.article-title:hover,
   overflow: hidden;
   border-bottom: 1px solid #ddd;
 }
+
 #main-nav {
   float: left;
   margin-left: -15px;
@@ -345,7 +346,7 @@ a.article-title:hover,
 }
 @media screen and (max-width: 839px) {
   .main-nav-link {
-    float: none;
+    float: left;
     text-align: center;
   }
 }
@@ -772,8 +773,7 @@ a.article-title:hover{
   border-left: 1px solid #ddd;
 }
 .archive-article-inner {
-  padding: 10px 10px 10px 12px;
-  margin: 15px 0 15px -2px;
+  padding: 5px;
   border-left: 3px solid transparent;
 }
 .archive-article-inner:hover {
@@ -788,7 +788,7 @@ a.article-title:hover{
   font-size: 0.85em;
   line-height: 1em;
   margin-bottom: 0.5em;
-  display: block;
+/*  display: block; */
 }
 #page-nav {
   margin: 50px auto;
@@ -1200,4 +1200,27 @@ pre .php .xml {
 .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+
+/* Drop the share links in the space to the right.
+   Doing it like this means it's easier for the author bio
+   to be flexible at smaller screen sizes while the share
+   links remain at a fixed width the whole time */
+.post-footer .share {
+    top: 6rem;
+    right: 0;
+    width: 180px;
+     margin: auto;
+}
+
+.post-footer .share a {
+    font-size: 1.8rem;
+    display: inline-block;
+    margin: 1rem 1.6rem 1.6rem 0;
+    text-decoration: none;
+}
+
+.post-footer .share a:hover {
+    color: #50585D;
 }

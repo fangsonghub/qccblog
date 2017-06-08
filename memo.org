@@ -1,16 +1,20 @@
 ** what i want
 
-- ! index: title 
-- ! index: summary only posts; read more style; how:pagiate. where...
-- ! post: title center
-- ! about: remove title/time layout
+- !index: title 
+- !index: summary only posts; read more style; how:pagiate. where...
+- !post: title center
+- !about: remove title/time layout
 - !font-family: web-friendly
-- host on github
+- !host on github
 - !learn RSS;
 - !squeeze title space from header
-- ! favicon: generated, not showing up
+- !favicon: generated, not showing up
+- !permalinks
 - !reading time; metadata center in post;
+- shortcode: about page title and description;
+- share buttons; done but center? and link color
 *** future
+- why index title left even under "a article-title: text-align:center"
 - link: header hover remove underline; footer: social icons style; http://ianlunn.github.io/Hover/
 - archive: year, category
 - menu float right, but left on small screen;

@@ -1,5 +1,6 @@
 +++
 title= "Quantum-secure Pseudorandom Permutations"
+slug = "QuantumPRP"
 date= "2017-06-05"
 tags = [
     "quantum security",

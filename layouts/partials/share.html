@@ -1,0 +1,9 @@
+{{ if ne .Params.share false}}
+<div class="post-footer share">
+    <span style="font-family: 'Merriweather', 'PT Serif', Georgia, 'Times New Roman', serif;">Share this {{ if .Type }}{{.Type}}{{else}}post{{end}}</span>
+    <a href="https://twitter.com/share?text={{ .Title | safeHTML }}&nbsp;-&nbsp;{{ .Site.Title | safeHTML }}&amp;url={{ .Permalink }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"  title="Twitter"><i class="fa fa-twitter-square fa-fw"></i></a>
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><i class="fa fa-facebook-square fa-fw"></i></a>    
+    <a href="https://plus.google.com/share?url={{ .Permalink }}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"  title="GooglePlus"><i class="fa fa-google-plus-square fa-fw"></i></a>
+</div>
+{{end}}
