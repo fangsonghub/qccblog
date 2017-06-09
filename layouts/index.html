@@ -2,10 +2,6 @@
 <body>
     <div id="container">
 	{{ partial "header.html" . }}
-<!-- title header	<div class="header">
-	    <h1>{{ .Title }}</h1>
-	    <h2>{{ .Site.Params.subtitle }}</h2>
-	</div> -->	
 	<section id="main" class="outer">
 	    {{ range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
             <article class="article article-type-post" itemscope itemprop="blogPost">

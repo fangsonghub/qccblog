@@ -11,8 +11,8 @@
 - !favicon: generated, not showing up
 - !permalinks
 - !reading time; metadata center in post;
-- shortcode: about page title and description;
-- share buttons; done but center? and link color
+- !shortcode: about page title and description;
+- share buttons; done but center? and link color; !add email, linkedin; 
 *** future
 - why index title left even under "a article-title: text-align:center"
 - link: header hover remove underline; footer: social icons style; http://ianlunn.github.io/Hover/

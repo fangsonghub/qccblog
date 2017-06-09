@@ -5,5 +5,8 @@
     </a>
     <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><i class="fa fa-facebook-square fa-fw"></i></a>    
     <a href="https://plus.google.com/share?url={{ .Permalink }}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"  title="GooglePlus"><i class="fa fa-google-plus-square fa-fw"></i></a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ .Permalink }}" onclick="window.open(this.href, 'linkedin-share', 'width=490,height=530');return false;" title="LinkedIn"><i class="fa fa-linkedin-square fa-fw" aria-hidden="true"></i></a>
+    <a  href="mailto:?subject={{ .Title }}&amp;body=Check out this post {{ .Permalink }}" onclick="window.open(this.href, 'email-share', 'width=490,height=530');return false;"
+	      title="Email"><i class="fa fa-envelope fa-fw"></i></a>
 </div>
 {{end}}

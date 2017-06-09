@@ -5,6 +5,8 @@ description = "About me and this site"
 type = "page"
 +++
 
+{{< pageheader >}}
+
 **Quantized Complex Crypto** was a blog name that Fang Song came up
   with not long after he started his PhD journey. He scribbled a word
   or two then, but they didn't go anywhere, unfortunately. A few years
