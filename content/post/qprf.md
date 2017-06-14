@@ -223,8 +223,6 @@ href="http://creativecommons.org/publicdomain/zero/1.0/deed.en"
 title="Creative Commons Zero, Public Domain Dedication">CC0</a>, <a
 href="https://commons.wikimedia.org/w/index.php?curid=27964423">Link</a></p>
 
-
-
 Next, as said earlier, one can replace truly random functions by
 quantum-secure PRFs in step 1), and this results in permutations that
 are indistinguishable from a truly random permutation against
@@ -312,19 +310,19 @@ reflect on them a bit, before we ask what's next.
 
 ### How about _almost_ FD-FPCs?
 
-Zhandry's FD-FPC (i.e. full security) is very stringent and in some
+Zhandry's FD-FPC (i.e., full security) is very stringent and in some
 sense captures **perfectly** indistinguishability. Is it possible to
 loose it slightly? For instance, consider an notion of
 $\epsilon$-**almost** FD-FPC where we require that after querying a
 construction $\sigma$ on all but $N^\epsilon$ elements of the domain
 of size $N$, it is still difficult for the distinguisher to tell it
-from a truly random permutation. It seems to me that, by direct
-statistical analysis or some standard techniques in quantum query
-complexity (e.g., [BBBV hybrid method][BBBV97]), this notion also
-implies quantum security. In fact, Zhandry's definition FD-FPC may
-already entails almost FD-FPC when very small $\epsilon$ is concerned.
+from a truly random permutation. It is likely that, by direct statistical
+analysis or some standard techniques in quantum query complexity
+(e.g., [BBBV hybrid method][BBBV97]), this notion also implies quantum
+security. In fact, Zhandry's definition FD-FPC may already entails
+almost FD-FPC when very small $\epsilon$ is concerned.
 
-### Rapid mixing implies (almost) fully-secure
+### Rapid mixing implies (almost) full security
 
 An immediate application about the almost FD-FPC is that rapid mixing
 implies almost FD-FPC. This is because rapid mixing means that if one
@@ -339,21 +337,34 @@ distinguishers who query (almost) the entire domain and make a
 decision, whereas rapid mixing ensures security for any
 distinguishers. 
 
+### How was full security proven? 
+
+You may have been wondering, after all, one still needs some technique
+to prove full security. How did people do it? Roughly speaking,
+Ristenpart and Yilek in their [mix-&-cut][RY13] paper introduced the
+_icicle_ technique, which recursively applies an "already-good-enough"
+inner PRP $\sigma$ on shorter inputs. This can be viewed as amplifying
+the security of $\sigma$ to full security. What does
+"already-good-enough" mean? It is basically almost FD-FPC that we just
+discussed. How to construct and prove a "already-good-enough" inner
+PRP? It turns out, not surprisingly, _rapid mixing of random walks_ is
+the hero again. This was demonstrated in the [Swap-or-Not][HMR12]
+construction, which is the inner PRP used in both FD-FPCs Zhandry
+identified (Mix-&-cut and Sometimes-recursive). Beware that the random
+walk studied in Swap-or-Not is the walk on _strings_ rather than
+_permutations_.
+
+
 # What now? 
 
 Well, maybe we just need to be happy now. But we (maybe just me) are
 so annoyed that no quantum security has been said about the original
-LubyRackoff's Balanced Feistel (BF) construction. 
+LubyRackoff's Balanced Feistel (BF) construction.
 
 > how many round are enough, if any, to make the LubyRackoff Balanced Feistel quantum-secure?
 
-First things off, Zhandry's FD-FPC approach does not help here,
-because BF is **NOT** FD-FPC, not even close to almost FD-FPC. It is
-known that its security cannot go beyond the birthday bound, i.e.,
-$\sqrt{2^{2n}}$ many queries suffice to break it.
-
-How about the rapid mixing approach? Restating the question we
-mentioned earlier 
+Let's start with the rapid mixing approach? Restating the question we
+mentioned earlier
 
 > does LubyRackoff construction (Balanced Feistel) also mix rapidly?
 
@@ -387,6 +398,17 @@ Is this approach totally doomed? One may identify a subgroup in $A_X$
 so that BF mixes rapidly on it and meanwhile a random element there
 remains indistinguishable from being truly random. But we do not see a
 clear route at present. 
+
+Finally note that Zhandry's FD-FPC approach does not help here,
+because BF is **NOT** FD-FPC, not even close to almost FD-FPC. Recall
+that Balanced Feistel only generates even permutations, whereas a
+truly random permutation is eaually liketly to be even or odd. A
+distinguisher querying the entire domain can of course reconstrut the
+permutation and determine if it is even or odd (with enough
+time). Similarly, we could imagine tweaking the definition of FD-FPC
+so that we just need the construction to be indistinguishable from a
+random even permutation. It still seems unlikely that poly-many rounds
+of BF is able to realize this slightly weaker notion of FD-FPC.
 
 ## Open question: efficient QPRPs
 
@@ -422,3 +444,4 @@ Any ideas? Comments welcome.
 [BBBV97]: https://arxiv.org/abs/quant-ph/9701001
 [HR10]: http://eprint.iacr.org/2010/301
 [MRS09]: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.149.6371
+[HMR12]: https://arxiv.org/abs/1208.1176
