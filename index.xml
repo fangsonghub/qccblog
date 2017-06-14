@@ -17,8 +17,8 @@
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>http://qcc.fangsong.info/2017-06-quantumprp/</guid>
-      <description> What is a PRP \(a^b = c\) can be written like this. $$ \Pr[a = b] $$
-subheading </description>
+      <description>This is a long due note concerning constructing quantum-secure pseudorandom permutations (QPRP), a problem that has made my collaborators and myself excited as well as disappointed a couple of times over the past few years. In a way this makes it a perfect fit for the debut post of this blog.
+A while ago, Mark Zhandry observed in a note that some existing constructions are immediately quantum-secure for simple reasons, hence confirming the existence of QPRPs.</description>
     </item>
     
     <item>

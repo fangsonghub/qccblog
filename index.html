@@ -99,7 +99,7 @@
 	<i class="fa fa-calendar fa-fw"></i>
         <time datetime='2017-06-05T00:00:00.000&#43;00:00' itemprop="datePublished">Mon Jun 5 2017</time> &#8226; 
 	
-	About 1-minute read
+	About 14-minute read
     
     
     
@@ -122,8 +122,8 @@
                     <div class="article-entry" itemprop="articleBody">
 			<p>
                             
-			     What is a PRP \(a^b = c\) can be written like this. $$ \Pr[a = b] $$
-subheading 
+			    This is a long due note concerning constructing quantum-secure pseudorandom permutations (QPRP), a problem that has made my collaborators and myself excited as well as disappointed a couple of times over the past few years. In a way this makes it a perfect fit for the debut post of this blog.
+A while ago, Mark Zhandry observed in a note that some existing constructions are immediately quantum-secure for simple reasons, hence confirming the existence of QPRPs.
 			</p>
 			<p class="article-more-link">
                             <a href="/2017-06-quantumprp/">Read More<i class="fa fa-angle-double-right fa-fw"></i></a>
@@ -168,7 +168,13 @@ subheading
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous"></script>
-    <script>renderMathInElement(document.body);</script>
+    
+    <script>renderMathInElement(document.body, {delimiters: [ 
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "\\(", right: "\\)", display: false},
+    ]});</script>
     
     <script>
      document.getElementById('main-nav-toggle').addEventListener('click', function () {
