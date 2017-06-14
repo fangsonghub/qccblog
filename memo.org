@@ -14,6 +14,7 @@
 - !shortcode: about page title and description;
 - share buttons; done but center? and link color; !add email, linkedin; 
 *** future
+- weixin share
 - why index title left even under "a article-title: text-align:center"
 - link: header hover remove underline; footer: social icons style; http://ianlunn.github.io/Hover/
 - archive: year, category

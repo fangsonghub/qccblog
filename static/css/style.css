@@ -496,7 +496,6 @@ a.article-title:hover{
 .article-entry {
   font-family: 'Lato', 'PT Serif', Georgia, 'Times New Roman', serif;
   color: #111;
-  padding: 0;
 }
 .article-entry:before,
 .article-entry:after {
@@ -507,6 +506,7 @@ a.article-title:hover{
   clear: both;
 }
 .article-entry p,
+
 .article-entry table {
   line-height: 1.4em;
   margin: 1em 0;
@@ -552,9 +552,11 @@ a.article-title:hover{
   padding: 10px 0;
 }
 .article-entry blockquote {
-  font-family: 'PT Serif', 'STZhongsong', '华文中宋', 'Microsoft Yahei', serif;
-  font-size: 1.4em;
-  margin: 1.4em 20px;
+  font-family: 'Merriweather', 'PT Serif', 'STZhongsong', '华文中宋', 'Microsoft Yahei', serif;
+  border-left: 10px solid #c76c0c;
+  border-right: 2px solid #c76c0c;
+  padding: 1px 5px 1px 5px;
+  background: #f9f9f9;
   text-align: center;
 }
 .article-entry blockquote footer {
