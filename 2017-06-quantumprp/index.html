@@ -471,7 +471,7 @@ discussed. How to construct and prove a &ldquo;already-good-enough&rdquo; inner
 PRP? It turns out, not surprisingly, <em>rapid mixing of random walks</em> is
 the hero again. This was demonstrated in the <a href="https://arxiv.org/abs/1208.1176">Swap-or-Not</a>
 construction, which is the inner PRP used in both FD-FPCs Zhandry
-identified (Mix-&amp;-cut and Sometimes-recursive). Beware that the random
+identified (Mix-&amp;-cut and Sometimes-recurse). Beware that the random
 walk studied in Swap-or-Not is the walk on <em>strings</em> rather than
 <em>permutations</em>.</p>
 
@@ -502,16 +502,16 @@ $A_X$.  We tried several techniques (spectral analysis, coupling
 argument as Morris used to show the mixing
 of <a href="http://epubs.siam.org/doi/abs/10.1137/050636231?journalCode=smjcat">Max-Unbalanced Feistel</a>), but were not successful.</p>
 
-<p>Then came the embarrassing moment. Shih-Han pointed to us that there
-is just not enough <strong>randomness</strong> or freedom to produce all even
+<p>Then came the embarrassing moment. Shih-Han pointed out that there is
+just not enough <strong>randomness</strong> or freedom to produce all even
 permutations by BF in poly-many rounds. A simple criterion that
 somehow sneaked out of our eyes. Think about how many possible
 permutations one round BF is able to generate &ndash; the number of
 possible round functions, which is $a = 2^{n2^n}$. So $r$-round
 iteration at most gives you $(2^{n2^n})^r = 2^{r n \cdot 2^n}$ many
 permutations. But what is the size of alternating group of $2n$-bit
-strings? It is $2^{2n}! /2 \approx 2^{2n\cdot 2^{2n}}$. Clearly $r$ needs
-to be at least $\Omega(2^n)$ to make ends meet.</p>
+strings? It is $2^{2n}! /2 \approx 2^{2n\cdot 2^{2n}}$. Clearly $r$
+needs to be at least $\Omega(2^n)$ to make ends meet.</p>
 
 <p>As a sanity check, the Max-Unbalanced Feistel does not suffer from
 this, because there are $2^{2^{2n-1}}$ possible functions each round,
