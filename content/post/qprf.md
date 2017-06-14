@@ -350,7 +350,7 @@ discussed. How to construct and prove a "already-good-enough" inner
 PRP? It turns out, not surprisingly, _rapid mixing of random walks_ is
 the hero again. This was demonstrated in the [Swap-or-Not][HMR12]
 construction, which is the inner PRP used in both FD-FPCs Zhandry
-identified (Mix-&-cut and Sometimes-recursive). Beware that the random
+identified (Mix-&-cut and Sometimes-recurse). Beware that the random
 walk studied in Swap-or-Not is the walk on _strings_ rather than
 _permutations_.
 
@@ -378,16 +378,16 @@ $A_X$.  We tried several techniques (spectral analysis, coupling
 argument as Morris used to show the mixing
 of [Max-Unbalanced Feistel][Morris08]), but were not successful.
 
-Then came the embarrassing moment. Shih-Han pointed to us that there
-is just not enough **randomness** or freedom to produce all even
+Then came the embarrassing moment. Shih-Han pointed out that there is
+just not enough **randomness** or freedom to produce all even
 permutations by BF in poly-many rounds. A simple criterion that
 somehow sneaked out of our eyes. Think about how many possible
 permutations one round BF is able to generate -- the number of
 possible round functions, which is $a = 2^{n2^n}$. So $r$-round
 iteration at most gives you $(2^{n2^n})^r = 2^{r n \cdot 2^n}$ many
 permutations. But what is the size of alternating group of $2n$-bit
-strings? It is $2^{2n}! /2 \approx 2^{2n\cdot 2^{2n}}$. Clearly $r$ needs
-to be at least $\Omega(2^n)$ to make ends meet. 
+strings? It is $2^{2n}! /2 \approx 2^{2n\cdot 2^{2n}}$. Clearly $r$
+needs to be at least $\Omega(2^n)$ to make ends meet.
 
 As a sanity check, the Max-Unbalanced Feistel does not suffer from
 this, because there are $2^{2^{2n-1}}$ possible functions each round,
