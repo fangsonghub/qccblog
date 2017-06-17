@@ -8,6 +8,7 @@ tags = [
     "Feistel",
 	]
 weight= 10	
+draft = "true"
 +++
   
 This is a long due note concerning constructing **quantum-secure
