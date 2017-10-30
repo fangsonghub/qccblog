@@ -3,14 +3,14 @@
 	<i class="fa fa-calendar fa-fw"></i>
         <time datetime='{{ .Date.Format "2006-01-02T15:04:05.000-07:00" }}' itemprop="datePublished">{{ .Date.Format "Mon Jan 2 2006" }}</time> &#8226; 
 	<!-- </a> -->
-	About {{ .ReadingTime }}-minute read
-    {{ $Site := .Site }}
-    {{ if .Params.categories }}
-    <div class="post-categories">
-        <div class="article-category">
-	    {{ range $i, $e := .Params.categories }}
-	    {{ if gt $i 0 }}
-	    <span>&gt;</span>
+	About {{ .ReadingTime }}-minute read {{ if .Params.author }}
+	&#8226 Author(s): {{.Params.author}} {{ end }}
+	
+	{{ $Site := .Site }} {{ if .Params.categories }}<div class="post-categories">
+            <div class="article-category">
+		{{ range $i, $e := .Params.categories }}
+		{{ if gt $i 0 }}
+		<span>&gt;</span>
 	    {{ end }}
 	    <a class="article-category-link" href="{{ $Site.BaseURL }}/categories/{{ $e | urlize }}">{{ $e }}</a>
 	    {{ end }}

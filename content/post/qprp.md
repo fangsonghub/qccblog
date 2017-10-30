@@ -2,20 +2,23 @@
 title= "Quantum-secure Pseudorandom Permutations"
 slug = "QuantumPRP"
 date= "2017-06-05"
+# author = "Fang Song"
+draft: false
 tags = [
     "quantum security",
     "psedurandom",
     "Feistel",
 	]
 weight= 10	
-draft = "true"
 +++
   
 This is a long due note concerning constructing **quantum-secure
 pseudorandom permutations** (QPRP), a problem that has made my
-collaborators and myself excited as well as disappointed a couple of
-times over the past few years. In a way this makes it a perfect fit
-for the debut post of this blog.
+collaborators
+([Andrew Childs][AC], [Shih-Han Hung][SHH], [Zhengfeng Ji][ZJ]) and
+myself excited as well as disappointed a couple of times over the past
+few years. In a way this makes it a perfect fit for the debut post of
+this blog.
 
 A while ago, [Mark Zhandry][MZ] observed in a [note][Zha16PRP] that
 some existing constructions are immediately quantum-secure for simple
@@ -24,15 +27,64 @@ reasons, hence confirming the _existence_ of QPRPs. This post aims to:
 1. give another simple observation that shows the _existence_ of
    QPRP. This is in fact an observation we had a long time ago, but
    probably only heard by a few colleagues over drinks.
-2. give a plain summary of Zhandry's observation and some discussion. 
+2. give a plain summary of Zhandry's observation and discuss its
+   connection to our observation and other thoughts.
 3. more importantly, depict the current status and the big questions
    that remain **unclear** about QPRP, beyond its mere _existence_. By
    sharing our (mostly failed) experience so far on approaching these
    problems, we would love to see more people bringing in new ideas.
 
-I will explain briefly the basic concepts of PRPs and the challenges
-of getting quantum-secure PRPs. You can safely skip it if you know
-about (and probably have suffered from) the problem.
+The full article may be long and a bit technical. I will start with a
+dense summary assuming you already know the context. Then I will walk
+through the whole story, including the basic concepts of
+PRPs and the challenges of getting quantum-secure PRPs.  
+
+<!-- You can safely skip it if you know about (and probably have suffered
+from) the problem. -->
+
+# Executive summary (assuming you know the context)
+
+Informally speaking, a pesudorandom permutation is a permutation that
+is _indistinguishable_ from a truly random permutation, agaisnt any
+poly-time algorithm that has oracle-access to the given
+permutation. The majority of classically secure constructions plugs a
+pseudorandom function into variants of a [Feistel][Feistel]
+network. They are **quantum-secure** if indistinguishability still
+holds against efficient quantum algorithms that can
+issue [quantum superposition][qsup] queries to the oracles. This makes
+proving quantum security difficult, and some classically-secure
+constructions actually get [broken][3rbreak] (e.g. 3-round
+Luby-Rackoff balanced Feistel). Nonetheless, there are sufficient
+conditions for quantum security as identified by us and Zhandry, and
+as a result, we are safe to say that quantum-secure PRPs do _exist_.
+
+- **Our observation**: basically we may view the Feistel construction as a
+  random walk on the permutation group, and if this walk mixes
+  rapidly, then it implies quantum indistinguishability. Maximally
+  unbalanced Feistel (a.k.a. Thorp Shuffle) is such an instance.
+  
+- **Zhandry's observation**: the essence of Zhandry's observation is
+  that if classical indistinguishability holds to the extreme, namely
+  against a distinguisher that queries the entire domain (hence
+  learning the entire permutation), then it remains
+  quantum-secure. This sounds a very stringent condition, but
+  classical cryptographers have actually been quite successful along
+  this line called _full security_. Several examples are known
+  (e.g., [Mix-&-Cut][RY13] and [Sometimes-recurse][MR14]).
+
+- **What else**? The two observations are both strong conditions that
+  are sufficient for quantum security. We note that the rapid-mixing
+  condition is even stronger (i.e., it implies full
+  security). Although we do not need to worry about the existence of
+  quantum-secure PRPs any more, it is irritating that we are still not
+  sure how to prove quantum security of the famous Luby-Rackoff
+  construction. In fact we do not even know if it is secure at all no
+  matter how many rounds we employ, though personally I'm positive
+  that it must be. More importantly, current existing examples are
+  very inefficient (compared to classical security with just constant
+  rounds). Can we find more efficient quantum-secure PRPs?
+
+Now the full story is at table.
 
 # PRPs and quantum security 
 
@@ -189,10 +241,10 @@ us an observation that shows the _existence_ of QPRP, which we thought
 insignificant back then (early 2014). None of us had imagined that it
 was till last summer (2016) that we resumed on this hanging problem,
 with a fresh mind joining force - [Shih-Han Hung][SHH], Andrew's Ph.D
-student at UMD. A few months later, the three of us were proven stupid
-by Shih-Han that the mixing approach would very likely fail on
-Balanced Feistel based on a counting argument. Let me come back to
-this later, and let good news come first.
+student at UMD. We realized a few months later that the mixing
+approach would very likely fail on Balanced Feistel based on a
+counting argument. Let me come back to this later, and let good news
+come first.
 
 ## Our observation: quantum PRPs exist based on Rapid Mixing
 
@@ -278,7 +330,14 @@ called _projective_ walks. It is often easier to analyze than the walk
 on the symmetric group. Classical cryptographers are also blessed that
 non-adaptive security can be easily [amplified][MPR07] by various
 forms of composition to achieve stronger security (e.g., adaptive,
-strong PRP).
+strong PRP). 
+
+That said, the $q$-_projective_ walk on strings is not totally
+unrelated to the walk on the symmetric group. Note that when $q$ is as
+big as the entire domain size, these two walks will indeed
+coincide. This is not super helpful though, since classical results
+are not ususally so strong. But they do exist, and this is exactly
+leading us to Zhandry's observation.
 
 ## Zhandry's observation: fully-secure PRPs are quantum-secure
 
@@ -413,6 +472,13 @@ of BF is able to realize this slightly weaker notion of FD-FPC.
 
 ## Open question: efficient QPRPs
 
+I am still optimistic about finding a **proof** of its quantum
+security (yeah, I do believe it is quantum-secure with not too-many
+rounds). As discussed before, we can say so much strong security
+classically, and maybe we are just missing a suitable _bridge_, i.e.,
+a sufficient condition for quantum security, which in the meantime
+follows from classical security results.
+
 Maybe we (I) should not be too obsessed by balanced Feistel. The more
 significant question is probably how to get more efficient QPRPs. The
 QPRPs identified so far (e.g., Max-UBF, Mix-Cut Shuffle) need linear
@@ -446,3 +512,4 @@ Any ideas? Comments welcome.
 [HR10]: http://eprint.iacr.org/2010/301
 [MRS09]: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.149.6371
 [HMR12]: https://arxiv.org/abs/1208.1176
+[qsup]: https://en.wikipedia.org/wiki/Quantum_superposition
