@@ -3,7 +3,7 @@ title= "Quantum-secure Pseudorandom Permutations"
 slug = "QuantumPRP"
 date= "2017-06-05"
 # author = "Fang Song"
-draft: false
+draft = "false"
 tags = [
     "quantum security",
     "psedurandom",
