@@ -56,7 +56,9 @@ proving quantum security difficult, and some classically-secure
 constructions actually get [broken][3rbreak] (e.g. 3-round
 Luby-Rackoff balanced Feistel). Nonetheless, there are sufficient
 conditions for quantum security as identified by us and Zhandry, and
-as a result, we are safe to say that quantum-secure PRPs do _exist_.
+as a result, we are safe to say that quantum-secure PRPs do _exist_
+(based on proper computational assumptions, e.g., existence of
+quantum-secure PRFs).
 
 - **Our observation**: basically we may view the Feistel construction as a
   random walk on the permutation group, and if this walk mixes
