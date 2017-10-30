@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feistel on Quantized Complex Crypto</title>
+    <link>http://qcc.fangsong.info/tags/feistel/</link>
+    <description>Recent content in Feistel on Quantized Complex Crypto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://qcc.fangsong.info/tags/feistel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quantum-secure Pseudorandom Permutations</title>
+      <link>http://qcc.fangsong.info/2017-06-quantumprp/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://qcc.fangsong.info/2017-06-quantumprp/</guid>
+      <description>This is a long due note concerning constructing quantum-secure pseudorandom permutations (QPRP), a problem that has made my collaborators (Andrew Childs, Shih-Han Hung, Zhengfeng Ji) and myself excited as well as disappointed a couple of times over the past few years. In a way this makes it a perfect fit for the debut post of this blog.
+A while ago, Mark Zhandry observed in a note that some existing constructions are immediately quantum-secure for simple reasons, hence confirming the existence of QPRPs.</description>
+    </item>
+    
+  </channel>
+</rss>
